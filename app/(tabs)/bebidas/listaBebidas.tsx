@@ -11,7 +11,7 @@ export default function BebidasScreen() {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('http://192.168.3.194:3000/bebidas');
+            const response = await fetch(`${process.env.EXPO_PUBLIC_API_URL}/bebidas`);
             const json = await response.json();
             setData(json);
         } catch (error) {
