@@ -24,15 +24,6 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="filmes/listaFilmes"
-        options={{
-          title: 'Filmes',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'videocam' : 'videocam-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
         name="bebidas/listaBebidas"
         options={{
           title: 'Bebidas',
@@ -40,6 +31,15 @@ export default function TabLayout() {
             <TabBarIcon name={focused ? 'beer' : 'beer-outline'} color={color} />
           ),
         }}
+      />
+      <Tabs.Screen
+        name="bebidas/cadastrarBebidas"
+        options={{
+          title: 'Cadastrar',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'beer' : 'beer-outline'} color={color} />
+          ),
+        }}  
       />
     </Tabs>
   );
